@@ -28,19 +28,22 @@ async function getMealsBySearch(term){
 }
 
 
-addMeal(mealData, random = false){
+function addMeal(mealData, random = false) {
   const meal = document.createElement('div');
-  meal.classList.add('meal')
+  meal.classList.add('meal');
 
   meal.innerHTML = `
   <div class="meal-header">
    ${random ? ` <span class="random">
    Random Recipe
  </span>` : ''}
-    <img src="${mealData.strMealThumb}" alt="${mealData.Meal}">
+    <img src="${mealData.strMealThumb}" alt="${mealData.strMeal}"/>
   </div>
   <div class="meal-body">
-    <h4>${mealData.Meal}</h4>
+    <h4>${mealData.strMeal}</h4>
     <button class="fav-btn"> <i class="fas fa-heart"></i></button>
-  </div>`
+  </div>
+  `;
+
+  meals.appendChild(meal)
 }
