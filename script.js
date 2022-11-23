@@ -45,5 +45,9 @@ function addMeal(mealData, random = false) {
   </div>
   `;
 
+  meal.querySelector('.meal-body .fav-btn').addEventListener('click', () =>{
+    alert('hello');
+  });
+
   meals.appendChild(meal)
 }
